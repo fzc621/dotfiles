@@ -1,3 +1,8 @@
+# Allow local customizations in the ~/.zshrc_local_before file
+if [ -f ~/.zshrc_local_before ]; then
+    source ~/.zshrc_local_before
+fi
+
 # Locale and LANGUAGE configurations
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -71,3 +76,8 @@ bindkey '^ ' autosuggest-accept
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 
 alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
+
+# Allow local customizations in the ~/.zshrc_local_after file
+if [ -f ~/.zshrc_local_after ]; then
+    source ~/.zshrc_local_after
+fi
