@@ -1,5 +1,5 @@
 # Allow local customizations in the ~/.zshrc_local_before file
-if [ -f ~/.zshrc_local_before ]; then
+if [[ -f ~/.zshrc_local_before ]]; then
     source ~/.zshrc_local_before
 fi
 
@@ -9,7 +9,7 @@ export LANG=en_US.UTF-8
 
 # zplug configuration
 export ZPLUG_HOME="$HOME/.zplug"
-if [[ ! -d $ZPLUG_HOME ]];then
+if [[ ! -d $ZPLUG_HOME ]]; then
   git clone https://github.com/zplug/zplug $ZPLUG_HOME
 fi
 source $ZPLUG_HOME/init.zsh
@@ -72,12 +72,26 @@ bindkey '^B' backward-word
 bindkey '^F' forward-word
 bindkey '^ ' autosuggest-accept
 
-# Settings for homebrew
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+export CONDA_HOME="$HOME/anaconda3"
+if [[ -d $CONDA_HOME ]]; then
+    __conda_setup="$("$CONDA_HOME/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "$CONDA_HOME/etc/profile.d/conda.sh" ]; then
+            . "$CONDA_HOME/etc/profile.d/conda.sh"
+        else
+            export PATH="$CONDA_HOME/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+fi
 
 alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
 
 # Allow local customizations in the ~/.zshrc_local_after file
-if [ -f ~/.zshrc_local_after ]; then
+if [[ -f ~/.zshrc_local_after ]]; then
     source ~/.zshrc_local_after
 fi
