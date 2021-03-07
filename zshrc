@@ -89,6 +89,12 @@ if [[ -d $CONDA_HOME ]]; then
     unset __conda_setup
 fi
 
+# Software mirrors when in China
+if [[ -f ~/.zshrc_cn ]]; then
+    source ~/.zshrc_cn
+fi
+
+# Alias
 alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
 
 # Allow local customizations in the ~/.zshrc_local_after file
