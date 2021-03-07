@@ -72,6 +72,10 @@ bindkey '^B' backward-word
 bindkey '^F' forward-word
 bindkey '^ ' autosuggest-accept
 
+# Use alias to avoid alias tips.
+MAGIC_ENTER_GIT_COMMAND="g st -u"
+MAGIC_ENTER_OTHER_COMMAND="ll"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 export CONDA_HOME="$HOME/anaconda3"
