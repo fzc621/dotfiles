@@ -8,6 +8,7 @@
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.zshrc: zshrc
+    ~/.gitignore_global: gitignore_global
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
