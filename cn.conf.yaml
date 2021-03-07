@@ -1,4 +1,13 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - link:
     ~/.zshrc_cn: zshrc_cn
+    ~/.condarc: 
+      if: '[ -d ~/anaconda3 ]'
+      path: condarc
+    ~/.config/pip/pip.conf: pip.conf
 
 
