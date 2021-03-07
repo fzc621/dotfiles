@@ -23,6 +23,7 @@ source $ZSH/oh-my-zsh.sh
 # zplug config
 
 ## Theme
+zstyle ':zplug:tag' depth 1
 zplug "themes/robbyrussell", from:oh-my-zsh, as:theme
 
 ##oh-my-zsh plugins
