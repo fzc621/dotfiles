@@ -1,0 +1,21 @@
+[user]
+	name = Zhichong Fang
+	email = fzc621@gmail.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+[push]
+	default = simple
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	
+# Allow local customizations in the .gitconfig_local file
+[include]
+    path = ~/.gitconfig_local

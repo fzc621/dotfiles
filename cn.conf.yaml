@@ -4,7 +4,7 @@
       relink: true
 
 - link:
-    ~/.zshrc_cn: zshrc_cn
+    ~/.zshrc_cn: zsh/zshrc_cn
     ~/.condarc: 
       if: '[ -d ~/anaconda3 ]'
       path: condarc
