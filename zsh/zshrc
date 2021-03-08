@@ -77,6 +77,9 @@ bindkey '^ ' autosuggest-accept
 MAGIC_ENTER_GIT_COMMAND="gst -u"
 MAGIC_ENTER_OTHER_COMMAND="ll"
 
+# Ignore alias tip for sudo
+export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 export CONDA_HOME="$HOME/anaconda3"
