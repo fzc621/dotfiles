@@ -102,6 +102,11 @@ if [[ -f ~/.zshrc_cn ]]; then
     source ~/.zshrc_cn
 fi
 
+# Show hostname & username
+if [[ -n $SSH_CONNECTION ]]; then
+    PROMPT="%{$fg[white]%}%n@%{$fg[green]%}%m%{$reset_color%} ${PROMPT}"
+fi
+
 # Alias
 alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
 
@@ -109,3 +114,4 @@ alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
 if [[ -f ~/.zshrc_local_after ]]; then
     source ~/.zshrc_local_after
 fi
+
