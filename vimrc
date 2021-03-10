@@ -24,6 +24,13 @@ set history=500
 filetype plugin on
 filetype indent on
 
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
 " Set to auto read when a file is changed from the outside
 set autoread
 au FocusGained,BufEnter * checktime
@@ -136,6 +143,20 @@ set wrap "Wrap lines
 " set listchars=tab:->,nbsp:~
 set showbreak=↪\
 set list listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
+" make g flag default for replace
+set gdefault
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Moving around, tabs, windows and buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <C-space> ?
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
 
 """"""""""""""""""""""""""""""
 " => Status line
