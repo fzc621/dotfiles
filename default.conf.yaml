@@ -3,7 +3,7 @@
       create: true
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.tmux.conf: tmux.conf
@@ -13,4 +13,7 @@
     ~/.vimrc: vimrc
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
+    - 
+      command: "if [[ $(echo $SHELL | awk -F/ '{print $NF}') != zsh ]]; then chsh -s $(which zsh); fi"
+      description: Making zsh the default shell
