@@ -43,6 +43,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "djui/alias-tips"
+zplug "supercrabtree/k"
 
 ## Todo
 # https://github.com/changyuheng/fz#zsh
@@ -75,7 +76,7 @@ bindkey '^ ' autosuggest-accept
 
 # Use alias to avoid alias tips.
 MAGIC_ENTER_GIT_COMMAND="gst -u"
-MAGIC_ENTER_OTHER_COMMAND="ll"
+MAGIC_ENTER_OTHER_COMMAND="k -h"
 
 # Ignore alias tip for sudo
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
@@ -109,6 +110,7 @@ fi
 
 # Alias
 alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
+alias ka="k -a -h"
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [[ -f ~/.zshrc_local_after ]]; then
