@@ -77,7 +77,7 @@ bindkey '^ ' autosuggest-accept
 
 # Use alias to avoid alias tips.
 MAGIC_ENTER_GIT_COMMAND="gst -u"
-MAGIC_ENTER_OTHER_COMMAND="k -h"
+MAGIC_ENTER_OTHER_COMMAND="k"
 
 # Ignore alias tip for sudo
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
@@ -111,7 +111,8 @@ fi
 
 # Alias
 alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
-alias ka="k -a -h"
+alias k="k -h"
+alias ka="k -a"
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [[ -f ~/.zshrc_local_after ]]; then
