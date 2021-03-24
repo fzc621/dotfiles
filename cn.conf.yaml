@@ -5,6 +5,7 @@
 
 - link:
     ~/.zshrc_cn: zsh/zshrc_cn
+    ~/.pydistutils.cfg: pydistutils.cfg
     ~/.condarc: 
       if: '[ -d ~/anaconda3 ]'
       path: condarc
