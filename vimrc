@@ -225,6 +225,7 @@ call plug#begin()
 
 " Plug 'sheerun/vim-polyglot'
 
+Plug 'tpope/vim-commentary'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
