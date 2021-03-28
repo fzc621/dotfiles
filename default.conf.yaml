@@ -11,6 +11,7 @@
     ~/.gitignore_global: git/gitignore_global
     ~/.gitconfig: git/gitconfig
     ~/.vimrc: vimrc
+    ~/config/.flake8: flake8
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
