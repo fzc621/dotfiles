@@ -28,7 +28,6 @@ zplug "themes/robbyrussell", from:oh-my-zsh, as:theme
 
 ##oh-my-zsh plugins
 zplug "plugins/tmux", from:oh-my-zsh
-zplug "plugins/autojump", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
@@ -49,7 +48,7 @@ zplug "esc/conda-zsh-completion"
 ## Todo
 # https://github.com/changyuheng/fz#zsh
 # zplug "changyuheng/fz", defer:1
-# zplug "rupa/z", use:z.sh
+zplug "rupa/z", use:z.sh
 
 # https://github.com/bigH/git-fuzzy
 # zplug "bigH/git-fuzzy", as:command, use:"bin/git-fuzzy"
