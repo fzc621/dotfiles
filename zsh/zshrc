@@ -47,7 +47,7 @@ zplug "esc/conda-zsh-completion"
 
 ## Todo
 # https://github.com/changyuheng/fz#zsh
-# zplug "changyuheng/fz", defer:1
+zplug "changyuheng/fz", defer:1
 zplug "rupa/z", use:z.sh
 
 # https://github.com/bigH/git-fuzzy
@@ -81,6 +81,9 @@ MAGIC_ENTER_OTHER_COMMAND="k"
 # Ignore alias tip for sudo
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
 
+# Source fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 export CONDA_HOME="$HOME/anaconda3"
@@ -96,6 +99,11 @@ if [[ -d $CONDA_HOME ]]; then
         fi
     fi
     unset __conda_setup
+fi
+
+# Enable fzf
+if [[ -f ~/.fzf.zsh ]]; then 
+    source ~/.fzf.zsh
 fi
 
 # Software mirrors when in China
