@@ -226,15 +226,17 @@ call plug#begin()
 " Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-commentary'
-Plug 'joshdick/onedark.vim'
+Plug 'ayu-theme/ayu-vim'
+set termguicolors
+let ayucolor="mirage"
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='onedark'
+let g:airline_theme='ayu'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 call plug#end()
 
 try
-    colorscheme onedark
+    colorscheme ayu
 endtry
