@@ -81,9 +81,6 @@ MAGIC_ENTER_OTHER_COMMAND="k"
 # Ignore alias tip for sudo
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
 
-# Source fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 export CONDA_HOME="$HOME/anaconda3"
