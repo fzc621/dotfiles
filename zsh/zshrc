@@ -35,6 +35,8 @@ zplug "plugins/magic-enter", from:oh-my-zsh
 zplug "plugins/systemadmin", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/gitignore", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh
+zplug "plugins/docker-compose", from:oh-my-zsh
 
 ## external plugins
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
