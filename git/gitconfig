@@ -1,6 +1,6 @@
 [user]
 	name = Zhichong Fang
-	email = fzc621@gmail.com
+    email = zf94@cornell.edu
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
