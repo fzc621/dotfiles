@@ -39,6 +39,7 @@ zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
 
 ## external plugins
+zplug "aloxaf/fzf-tab"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
@@ -103,6 +104,7 @@ fi
 # Enable fzf
 if [[ -f ~/.fzf.zsh ]]; then 
     source ~/.fzf.zsh
+    export FZF_DEFAULT_COMMAND='fd --type f'
 fi
 
 # Software mirrors when in China
