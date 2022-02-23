@@ -33,27 +33,22 @@ zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/magic-enter", from:oh-my-zsh
 zplug "plugins/systemadmin", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/gitignore", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
 
 ## external plugins
 zplug "aloxaf/fzf-tab"
+zplug 'wfxr/forgit'
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "djui/alias-tips"
 zplug "esc/conda-zsh-completion"
-
-## Todo
-# https://github.com/changyuheng/fz#zsh
 zplug "changyuheng/fz", defer:1
 zplug "rupa/z", use:z.sh
 
-# https://github.com/bigH/git-fuzzy
-# zplug "bigH/git-fuzzy", as:command, use:"bin/git-fuzzy"
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -77,7 +72,7 @@ bindkey '^F' forward-word
 bindkey '^ ' autosuggest-accept
 
 # Use alias to avoid alias tips.
-MAGIC_ENTER_GIT_COMMAND="gst -u"
+MAGIC_ENTER_GIT_COMMAND="g status -u"
 MAGIC_ENTER_OTHER_COMMAND="ll"
 
 # Ignore alias tip for sudo
@@ -125,6 +120,7 @@ fi
 # Alias
 alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
 alias ls="exa"
+alias g="git"
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [[ -f ~/.zshrc_local_after ]]; then
