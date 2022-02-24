@@ -1,15 +1,26 @@
 [user]
 	name = Zhichong Fang
     email = zf94@cornell.edu
-[alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[core]
-	excludesfile = ~/.gitignore_global
-	autocrlf = input
 [push]
 	default = simple
 [pull]
 	rebase = true
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+    pager = delta
+[diff]
+    tool = vimdiff
+    colorMoved = default
+[merge]
+    tool = vimdiff
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    line-numbers = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [init]
 	defaultBranch = main
 [filter "lfs"]
