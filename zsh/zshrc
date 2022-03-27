@@ -72,7 +72,7 @@ bindkey '^F' forward-word
 bindkey '^ ' autosuggest-accept
 
 # Use alias to avoid alias tips.
-MAGIC_ENTER_GIT_COMMAND="g status -u"
+MAGIC_ENTER_GIT_COMMAND="g st -u"
 MAGIC_ENTER_OTHER_COMMAND="ll"
 
 # Ignore alias tip for sudo
@@ -87,7 +87,7 @@ if [[ -d $CONDA_HOME ]]; then
         eval "$__conda_setup"
     else
         if [ -f "$CONDA_HOME/etc/profile.d/conda.sh" ]; then
-            . "$CONDA_HOME/etc/profile.d/conda.sh"
+# . "$CONDA_HOME/etc/profile.d/conda.sh"  # commented out by conda initialize
         else
             export PATH="$CONDA_HOME/bin:$PATH"
         fi
@@ -118,9 +118,13 @@ if [[ -n $SSH_CONNECTION ]]; then
 fi
 
 # Alias
-alias mkcd="function _mkcd(){ mkdir $@;cd $_ };_mkcd"
 alias ls="exa"
+alias la="ls -a"
 alias g="git"
+alias ipy="ipython"
+
+# Create a folder and move into it in one command
+function mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [[ -f ~/.zshrc_local_after ]]; then
