@@ -228,8 +228,9 @@ Plug 'mhinz/vim-startify'
 " Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-commentary'
-Plug 'ayu-theme/ayu-vim'
+Plug 'Luxed/ayu-vim'
 set termguicolors
+set background=dark
 let ayucolor="mirage"
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -239,6 +240,4 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 call plug#end()
 
-try
-    colorscheme ayu
-endtry
+colorscheme ayu
