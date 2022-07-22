@@ -117,14 +117,16 @@ if [[ -n $SSH_CONNECTION ]]; then
     PROMPT="%{$fg[white]%}%n@%{$fg[green]%}%m%{$reset_color%} ${PROMPT}"
 fi
 
+# Homebrew
+if [[ -d ~/homebrew ]]; then
+    export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH"
+fi
+
 # Alias
 alias ls="exa"
 alias la="ls -a"
 alias g="git"
 alias ipy="ipython"
-
-# Create a folder and move into it in one command
-function mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [[ -f ~/.zshrc_local_after ]]; then
