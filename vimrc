@@ -14,6 +14,9 @@ set shortmess+=I
 " Show line numbers.
 set number
 
+" Mark the line the cursor is in
+set cursorline
+
 " Enables relative line numbering mode. 
 set relativenumber
 

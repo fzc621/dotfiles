@@ -128,11 +128,18 @@ if command -v exa >/dev/null; then
 fi
 alias la="ls -a"
 alias g="git"
+if command -v nvim >/dev/null; then
+    alias vim="nvim"
+fi
 alias v="vim"
 
 # Functions
 mkcd() {
   mkdir -p "$1" && cd "$1"
+}
+
+jk() {
+  kill -9 $1
 }
 
 # Allow local customizations in the ~/.zshrc_local_after file
