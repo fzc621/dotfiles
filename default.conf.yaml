@@ -12,6 +12,12 @@
     ~/.gitconfig: git/gitconfig
     ~/.vimrc: vimrc
     ~/.config/flake8: flake8
+    ~/.config/nvim:
+      path: nvim/*
+      create: true
+      relink: true
+      glob: true
+      exclude: nvim/plugin
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
