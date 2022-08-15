@@ -126,8 +126,6 @@ fi
 # ls alias
 if command -v exa >/dev/null; then
     alias ls="exa"
-else
-    echo "Exa not installed. Use vanialla ls."
 fi
 alias la="ls -a"
 
@@ -144,8 +142,6 @@ alias v="vim"
 
 if command -v bat >/dev/null; then
     alias cat="bat"
-else
-    echo "Bat not installed. Use vanialla cat."
 fi
 
 # Functions
