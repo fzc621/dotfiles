@@ -1,6 +1,6 @@
 [user]
 	name = Zhichong Fang
-    email = zf94@cornell.edu
+    email = fzc621@gmail.com
 [push]
 	default = simple
 [pull]
@@ -22,7 +22,7 @@
 [alias]
     a = add
     br = branch
-    ci = commit
+    cm = commit
     co = checkout
     
     d = diff
@@ -40,7 +40,7 @@
     mg = merge
     rb = rebase
     rh = reset HEAD
-    ro = remote
+    rmt = remote
     
     sh = stash
     shl = stash list
