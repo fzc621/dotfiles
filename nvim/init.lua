@@ -9,4 +9,4 @@ require("user.lsp")
 require("user.toggleterm")
 require("user.lsp_lines")
 
-pcall(require, "local")
+pcall(require, "user.local")
