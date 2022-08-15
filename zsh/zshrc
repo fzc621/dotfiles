@@ -125,11 +125,15 @@ fi
 # Alias
 if command -v exa >/dev/null; then
     alias ls="exa"
+else
+    echo "Exa not installed. Use vanialla ls."
 fi
 alias la="ls -a"
 alias g="git"
 if command -v nvim >/dev/null; then
     alias vim="nvim"
+else
+    echo "No nvim installed. Use vanilla vim."
 fi
 alias v="vim"
 
