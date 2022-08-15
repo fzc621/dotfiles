@@ -123,19 +123,30 @@ if [[ -d ~/homebrew ]]; then
 fi
 
 # Alias
+# ls alias
 if command -v exa >/dev/null; then
     alias ls="exa"
 else
     echo "Exa not installed. Use vanialla ls."
 fi
 alias la="ls -a"
+
 alias g="git"
+alias h="hg"
+
+# vim alias
 if command -v nvim >/dev/null; then
     alias vim="nvim"
 else
     echo "No nvim installed. Use vanilla vim."
 fi
 alias v="vim"
+
+if command -v bat >/dev/null; then
+    alias cat="bat"
+else
+    echo "Bat not installed. Use vanialla cat."
+fi
 
 # Functions
 mkcd() {
