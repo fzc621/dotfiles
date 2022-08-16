@@ -4,6 +4,8 @@ require("user.options")
 require("user.keymaps")
 require("user.plugins")
 
+require("telescope").load_extension("fzf")
+
 require("user.colorscheme")
 require("user.lsp")
 require("user.toggleterm")

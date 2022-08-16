@@ -221,6 +221,7 @@ return packer.startup(function(use)
         end,
     })
 
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use({
         "nvim-telescope/telescope.nvim",
         requires = { "nvim-lua/plenary.nvim" },
@@ -299,6 +300,14 @@ return packer.startup(function(use)
                         },
                     },
                 },
+                extensions = {
+                    fzf = {
+                        fuzzy = true,
+                        override_generic_sorter = true,
+                        override_file_sorter = true,
+                        case_mode = "smart_case",
+                    }
+                }
             })
 
             vim.api.nvim_set_keymap(
