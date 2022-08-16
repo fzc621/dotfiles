@@ -72,6 +72,7 @@ return packer.startup(function(use)
     })
 
     -- Statusline
+    use 'arkav/lualine-lsp-progress'
     use({
         "nvim-lualine/lualine.nvim",
         requires = "kyazdani42/nvim-web-devicons",
@@ -86,6 +87,7 @@ return packer.startup(function(use)
                             "filename",
                             path = 1,
                         },
+                        "lsp_progress"
                     },
                     lualine_x = {
                         -- 'require("meta.lsp.handlers").'
