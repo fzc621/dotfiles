@@ -208,20 +208,18 @@ return packer.startup(function(use)
             })
         end,
     })
-
     use({
         "windwp/nvim-autopairs",
         after = "nvim-cmp",
         config = function()
             require("nvim-autopairs").setup({})
-
             local cmp_autopairs = require("nvim-autopairs.completion.cmp")
             local cmp = require("cmp")
             cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
         end,
     })
 
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use({
         "nvim-telescope/telescope.nvim",
         requires = { "nvim-lua/plenary.nvim" },
@@ -348,7 +346,6 @@ return packer.startup(function(use)
             local tree_cb = nvim_tree_config.nvim_tree_callback
             require("nvim-tree").setup({
                 disable_netrw = true,
-                open_on_setup = true,
                 ignore_ft_on_setup = {
                     "startify",
                     "dashboard",
@@ -360,8 +357,6 @@ return packer.startup(function(use)
                     ignore_list = {},
                 },
                 view = {
-                    width = 30,
-                    height = 30,
                     hide_root_folder = false,
                     side = "left",
                     mappings = {
