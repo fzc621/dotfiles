@@ -17,7 +17,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
 
@@ -42,7 +42,18 @@ return packer.startup(function(use)
     use("Shatur/neovim-ayu")
     use("folke/tokyonight.nvim")
 
-    -- A snazzy buffer line
+    use("Pocco81/auto-save.nvim")
+
+
+    -- Lua
+    use {
+      "folke/zen-mode.nvim",
+      config = function()
+        require("zen-mode").setup {
+        }
+      end
+    }
+        -- A snazzy buffer line
     use({
         "akinsho/bufferline.nvim",
         requires = { "kyazdani42/nvim-web-devicons" },
