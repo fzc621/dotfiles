@@ -112,11 +112,6 @@ if [[ -f ~/.iterm2_shell_integration.zsh ]]; then
     source ~/.iterm2_shell_integration.zsh
 fi
 
-# Show hostname & username
-if [[ -n $SSH_CONNECTION ]]; then
-    PROMPT="%{$fg[white]%}%n@%{$fg[green]%}%m%{$reset_color%} ${PROMPT}"
-fi
-
 # Homebrew
 if [[ -d ~/homebrew ]]; then
     export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH"
@@ -157,3 +152,5 @@ jk() {
 if [[ -f ~/.zshrc_local_after ]]; then
     source ~/.zshrc_local_after
 fi
+
+eval "$(starship init zsh)"
