@@ -110,11 +110,6 @@ if [[ -f ~/.iterm2_shell_integration.zsh ]]; then
     source ~/.iterm2_shell_integration.zsh
 fi
 
-# Homebrew
-if [[ -d ~/homebrew ]]; then
-    export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH"
-fi
-
 # Alias
 # ls alias
 if command -v exa >/dev/null; then
