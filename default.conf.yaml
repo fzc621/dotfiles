@@ -10,13 +10,11 @@
     ~/.zshrc: zsh/zshrc
     ~/.gitignore_global: git/gitignore_global
     ~/.gitconfig: git/gitconfig
-    ~/.vimrc: vimrc
     ~/.config/nvim:
       path: nvim/*
       create: true
       relink: true
       glob: true
-      exclude: nvim/plugin
     ~/.config/starship.toml: starship.toml
 
 - shell:

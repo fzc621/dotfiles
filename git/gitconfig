@@ -1,6 +1,6 @@
 [user]
 	name = Zhichong Fang
-    email = fzc621@gmail.com
+	email = fzc621@gmail.com
 [push]
 	default = simple
 [pull]
@@ -8,53 +8,54 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
-    pager = delta
+	pager = delta
 [diff]
-    tool = vimdiff
-    colorMoved = default
+	tool = vimdiff
+	colorMoved = default
 [merge]
-    tool = vimdiff
+	tool = vimdiff
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [delta]
-    navigate = true
-    line-numbers = true
+  side-by-side = true
+	navigate = true
+	line-numbers = true
 [alias]
-    a = add
-    br = branch
-    cm = commit
-    co = checkout
-    
-    d = diff
-    dc = diff --cached
-    dh = diff HEAD
-    dhh = diff HEAD~1
-    dl = diff HEAD~1 HEAD
-    dt = difftool
-    dtc = difftool --cached
-    dth = difftool HEAD
-    dthh = difftool HEAD~1
-    
-    l = log
-    lf = ls-files
-    mg = merge
-    rb = rebase
-    rh = reset HEAD
-    rmt = remote
-    
-    sh = stash
-    shl = stash list
-    shs = stash show -p
-    sp = stash pop
-    
-    st = status
-    
-    pl = pull
-    plm = pull origin master
-    plo = pull origin
-    ps = push
-    psm = push origin master
-    pso = push origin
+	a = add
+	br = branch
+	cm = commit
+	co = checkout
+
+	d = diff
+	dc = diff --cached
+	dh = diff HEAD
+	dhh = diff HEAD~1
+	dl = diff HEAD~1 HEAD
+	dt = difftool
+	dtc = difftool --cached
+	dth = difftool HEAD
+	dthh = difftool HEAD~1
+
+	l = log
+	lf = ls-files
+	mg = merge
+	rb = rebase
+	rh = reset HEAD
+	rmt = remote
+
+	sh = stash
+	shl = stash list
+	shs = stash show -p
+	sp = stash pop
+
+	st = status
+
+	pl = pull
+	plm = pull origin master
+	plo = pull origin
+	ps = push
+	psm = push origin master
+	pso = push origin
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [init]
 	defaultBranch = main
@@ -66,4 +67,4 @@
 	
 # Allow local customizations in the .gitconfig_local file
 [include]
-    path = ~/.gitconfig_local
+	path = ~/.gitconfig_local
